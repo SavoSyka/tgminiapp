@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to the Telegram Mini App</h1>
+    <button id="close">Close App</button>
+
+    <script>
+      // Initialize the Telegram Web App
+      const tg = window.Telegram.WebApp;
+
+      // Set up a button to close the mini app
+      document.getElementById('close').addEventListener('click', () => {
+        tg.close();
+      });
+
+      // You can use tg.initData to get information about the user and chat
+      console.log(tg.initDataUnsafe);
+    </script>
+  </body>
+</html>
